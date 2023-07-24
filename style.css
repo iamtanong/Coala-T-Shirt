@@ -43,6 +43,12 @@ body {
     font-size: 16px;
 }
 
+.container {
+    position: relative;
+    width: 100%;
+    height: max-content;
+}
+
 .main {
     width: 100%;
     /* height: 100vh; */
@@ -54,10 +60,12 @@ body {
 
     gap: 10%;
 
-    .shirt-preview,
-    .shirt-option {
-        width: 45%;
-    }
+}
+
+.main,
+.shirt-preview,
+.main .shirt-option {
+    width: 45%;
 }
 
 .shirt-preview {
@@ -183,7 +191,6 @@ input[type="number"]::-webkit-inner-spin-button {
 
 button[type="button"]:hover {
     cursor: pointer;
-    /* text-decoration: underline; */
 }
 
 .cart-buy-group {
@@ -197,16 +204,20 @@ button[type="button"]:hover {
     font-size: 16px;
     font-weight: 500;
     border-radius: 5px;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .cart-btn {
-    border: solid .2px #eee;
+    border: none;
     background-color: #eee;
 }
 
 
 .buy-now-btn {
-    border: solid .2px #eee;
+    border: none;
     background-color: royalblue;
     color: #fff;
 }
