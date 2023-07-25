@@ -60,11 +60,20 @@ body {
 
     gap: 10%;
 
+    @media (max-width: 750px) {
+        flex-direction: column;
+        gap: 25px;
+    }
 }
 
 .main .shirt-preview,
 .main .shirt-option {
     width: 45%;
+
+    @media (max-width: 750px) {
+        width: 95%;
+        margin: 0 auto;
+    }
 }
 
 .shirt-preview {
@@ -100,6 +109,11 @@ body {
         position: relative;
         display: flex;
         flex-direction: column;
+        font-size: 14px;
+    }
+
+    @media (max-width: 750px) {
+        padding: 10px;
     }
 }
 
@@ -111,6 +125,8 @@ body {
     margin-bottom: 25px;
     gap: 15px;
     height: fit-content;
+
+    @media (max-width: 450px) {}
 }
 
 .radio-group {
@@ -120,11 +136,12 @@ body {
 }
 
 
-
-/* input[type="radio"] {} */
-
 label {
     font-size: 16px;
+
+    @media (max-width: 450px) {
+        font-size: 14px;
+    }
 }
 
 .radio-group input[type="radio"] {
@@ -134,8 +151,9 @@ label {
     &:is(:focus, :checked)+label.radio-label::after {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         border-radius: inherit;
         width: 100%;
         height: 100%;
@@ -151,6 +169,11 @@ label {
     border-radius: 5px;
     background-color: #eee;
     user-select: none;
+
+    @media (max-width: 450px) {
+        margin: 0;
+        padding: 5px 10px;
+    }
 }
 
 input[type="number"]::-webkit-inner-spin-button {
@@ -167,6 +190,13 @@ input[type="number"]::-webkit-inner-spin-button {
 
     font-size: 30px;
     text-align: center;
+
+    @media (max-width: 450px) {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        padding: 10px;
+    }
 }
 
 .input-row-group input[type="number"]:focus,
@@ -176,12 +206,19 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .input-row-group .count-btn {
     width: 50px;
-    height: 50px;
+    /* height: 50px; */
+    aspect-ratio: 1/1;
     background-color: #fff;
     border: solid .2px #333;
     border-radius: 12px;
     font-size: 30px;
     font-weight: 300;
+
+    @media (max-width: 450px) {
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+    }
 }
 
 .count-input {
@@ -224,6 +261,10 @@ button[type="button"]:hover {
 .shirt-detail {
     width: 100%;
     padding: 50px 150px;
+
+    @media (max-width: 450px) {
+        padding: 25px;
+    }
 }
 
 .shirt-detail>table {
