@@ -62,8 +62,7 @@ body {
 
 }
 
-.main,
-.shirt-preview,
+.main .shirt-preview,
 .main .shirt-option {
     width: 45%;
 }
