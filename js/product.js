@@ -21,13 +21,13 @@ async function ProductPage() {
 
     await fetch(product_url, options)
         .then(res => res.json())
-        .then(product => {
+        .then(async product => {
             console.log(product);
 
             // Product detail (focus size)
-            fetch(type_url + product['type'], options)
+            await fetch(type_url + product['type'], options)
                 .then(res => res.json())
-                .then(product_type => {
+                .then(async product_type => {
                     var template_type = JSON.parse(product_type["property"])
                     console.log(template_type)
 
@@ -35,16 +35,16 @@ async function ProductPage() {
                         console.log(key)
                         let sub_template = template_type[key]
                         console.log(sub_template)
-                        
+
                         let sub_product = JSON.parse(product['property'])[key]
                         console.log(sub_product)
 
                         // Add Button
                         for (let i = 0; i < sub_product.length; i++) {
-                            if (sub_product[i] == 1) addButton(key, sub_template[i], HTML_template, index)
+                            if (sub_product[i] == 1) await addButton(key, sub_template[i], HTML_template, index)
                         }
                     }
-                    
+
                 })
                 .catch(error => console.error("Error", error))
 
@@ -67,7 +67,7 @@ async function ProductPage() {
         })
     })
 
-} 
+}
 
 function addButton(name, value, template, i) {
     let element = document.getElementsByClassName("input-row-group")[i]
@@ -105,8 +105,10 @@ function order() {
 
 ProductPage()
 
-window.onload = () => {document.querySelectorAll("input[type='radio']").forEach(e => {
-    e.addEventListener("change", () => {
-        console.log(e.attributes?.value.value)
+window.onload = () => {
+    document.querySelectorAll("input[type='radio']").forEach(e => {
+        e.addEventListener("change", () => {
+            console.log(e.attributes?.value.value)
+        })
     })
-})}
+}
