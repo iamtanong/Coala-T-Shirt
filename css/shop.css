@@ -32,12 +32,12 @@
     background-color: #d9d9d9;
 }
 
-.product-desc h1.product-name {
+.product-desc .product-name {
     font-size: 20px;
     font-weight: 700px;
 }
 
-.product-desc h2.shop-name {
+.product-desc .shop-name {
     font-size: 10px;
     color: #858585;
     margin-bottom: 15px;
@@ -61,7 +61,7 @@
 
 }
 
-.product-desc h3.price {
+.product-desc .price {
     font-size: 16px;
     font-weight: 800px;
     color: #737373;

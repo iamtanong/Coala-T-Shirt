@@ -1,5 +1,5 @@
 .option {
-    padding: 8% 80px;
+    padding: 5% 80px;
     height: 100%;
     position: relative;
     display: flex;
@@ -32,7 +32,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        font-size: 14px;
+        font-family: 'Inter', sans-serif;
     }
 
     @media (max-width: 750px) {
@@ -78,6 +78,7 @@ div.option-part {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-top: 35px;
     margin-bottom: 25px;
     gap: 15px;
     height: fit-content;
@@ -86,7 +87,13 @@ div.option-part {
 }
 
 span.option-name {
-    position: static;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #616060;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
 }
 
 .radio-group {
@@ -114,11 +121,10 @@ label {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        border-radius: inherit;
         width: 100%;
         height: 100%;
+        border-radius: inherit;
         border: .2px solid #555;
-        padding: 5px 15px;
     }
 }
 
@@ -128,7 +134,7 @@ label {
     padding: 5px 20px;
     margin: 5px;
     border-radius: 10px;
-    background-color: #eee;
+    background-color: #d9d9d9;
     user-select: none;
 
     @media (max-width: 450px) {
