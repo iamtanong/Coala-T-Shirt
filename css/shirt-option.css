@@ -1,5 +1,5 @@
 .option {
-    padding: 5% 80px;
+    padding: 3% 80px;
     height: 100%;
     position: relative;
     display: flex;
@@ -28,19 +28,15 @@
     width: 50%;
     height: 100%;
 
-    & form {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        font-family: 'Inter', sans-serif;
-    }
-
     @media (max-width: 750px) {
         padding: 10px;
     }
 }
 
 form#shirt-option-parts {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     font-family: 'Inter', sans-serif;
 }
 
@@ -70,7 +66,11 @@ div.option-part {
 .option-part h1.product-name {
     font-weight: 800;
     font-size: 28px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+}
+
+#step-2 .product-name {
+    margin-bottom: 10px;
 }
 
 .input-row-group {
@@ -79,7 +79,7 @@ div.option-part {
     flex-direction: row;
     flex-wrap: wrap;
     padding-top: 35px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     gap: 15px;
     height: fit-content;
 
@@ -143,10 +143,34 @@ label {
     }
 }
 
-input[type="number"]::-webkit-inner-spin-button {
-    appearance: none;
+.save-world {
+    position: relative;
+    width: 100%;
+    background-color: #e4e4e4;
+    padding: 10px;
+    padding-left: 50px;
+    border-radius: 15px;
 }
 
+#save-world-check {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 10px;
+    border: solid 1px #888;
+}
+
+.save {
+    font-size: 24px;
+    font-weight: 700;
+    color: #010101;
+}
+
+.must-read {
+    font-size: 14px;
+    font-weight: 500;
+    color: #FB6E4F;
+}
 
 .input-row-group input[type="number"] {
     border-radius: 5px;
@@ -171,59 +195,78 @@ input[type="number"]::-webkit-inner-spin-button {
     border: solid .2px #333;
 }
 
-.input-row-group .count-btn {
-    width: 50px;
-    /* height: 50px; */
-    aspect-ratio: 1/1;
-    background-color: #fff;
-    border: solid .2px #333;
-    border-radius: 12px;
-    font-size: 30px;
-    font-weight: 300;
+.size-amount-group table {
+    position: relative;
+    width: 100%;
+    border-collapse: collapse;
 
-    @media (max-width: 450px) {
-        width: 45px;
-        height: 45px;
-        font-size: 24px;
+    & td {
+        text-align: center;
+        vertical-align: baseline;
+        padding: 5px;
+    }
+
+    & td:first-child {
+        width: 55px;
     }
 }
 
-.count-input {
-    justify-content: center
-}
-
-button[type="button"]:hover {
-    cursor: pointer;
-}
-
-.cart-buy-group {
-    justify-content: space-between;
-}
-
-.cart-btn,
-.buy-now-btn {
-    width: 45%;
-    height: 40px;
-    font-size: 16px;
+.size-amount-header {
+    font-size: 14px;
     font-weight: 500;
-    border-radius: 5px;
+    color: #868686;
+}
 
-    &:hover {
-        text-decoration: underline;
+.size-amount-row::after {
+    position: relative;
+    height: 25px;
+    width: 100%;
+}
+
+.size {
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    width: 100%;
+    vertical-align: baseline;
+
+    padding: 12px;
+    border-radius: 8px;
+    aspect-ratio: 1/1;
+}
+
+.amount-input {
+    height: 30px;
+    background-color: #d9d9d9;
+    border: none;
+    border-radius: 8px;
+    position: relative;
+    padding: 5px 10px;
+    margin-inline: 10px;
+
+    &::placeholder {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        font-weight: 600;
+        user-select: none;
+    }
+
+    &:is(:focus)::placeholder {
+        z-index: -1;
     }
 }
 
-.cart-btn {
-    border: none;
-    background-color: #eee;
+.LCS-inch {
+    font-size: 14px;
+    font-weight: 600;
+    color: #868686;
+    margin-block: 25px;
 }
 
-
-.buy-now-btn {
-    border: none;
-    background-color: royalblue;
-    color: #fff;
-}
 
 .step-btn-group {
     position: absolute;
