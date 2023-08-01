@@ -167,10 +167,6 @@ li#sign-in {
     background-color: #F4380E;
 }
 
-input[type="text"] {
-    padding: 5px;
-    height: 25px;
-}
 
 #search-bar {
     position: relative;
@@ -181,4 +177,5 @@ input[type="text"] {
     background-color: #d9d9d9;
     border: none;
     border-radius: 5px;
+    padding: 5px 10px;
 }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="register-group">
+            <div class="left">
+                <div class="left-content">
+                    <div class="sign-up-mode current-mode">
+                        <h1 class="greeting">Welcome !</h1>
+                        <h3 class="keep-connect">To keep connected with us please login with your personal info</h3>
+                        <button type="button" class="sign-in-btn">Sign In</button>
+                    </div>
+                    <div class="sign-in-mode">
+                        <h1 class="greeting">Welcome Back !</h1>
+                        <h3 class="keep-connect">To keep connected with us please login with your personal info</h3>
+                        <button type="button" class="sign-up-btn">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="sign-up-form current-form">
+                    <form>
+                        <div class="form-part">
+                            <!-- <h3 class="progress">Step 1 of 2</h3> -->
+                            <h2 class="join-coala">Join and be Coala</h2>
+                            <h4 class="enter-info">Enter your Information</h4>
+
+                            <div class="input-group">
+                                <div class="row">
+                                    <input type="text" name="sign-up-username" id="sign-up-username"
+                                        class="text-input-row" placeholder=" " autocomplete="off">
+                                    <label for="sign-up-username" class="text-input-label">Username</label>
+                                </div>
+                                <div class="row">
+                                    <div>
+                                        <input type="text" name="sign-up-firstname" id="sign-up-firstname"
+                                            class="text-input-row" placeholder=" " autocomplete="off">
+                                        <label for="sign-up-firstname" class="text-input-label">Firstname</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="text" name="sign-up-lastname" id="sign-up-lastname"
+                                            class="text-input-row" placeholder=" " autocomplete="off">
+                                        <label for="sign-up-lastname" class="text-input-label">Lastname</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <input type="password" name="sign-up-password" id="sign-up-password"
+                                        class="text-input-row" placeholder=" " autocomplete="off">
+                                    <label for="sign-up-password" class="text-input-label">Password</label>
+                                </div>
+                                <div class="row">
+                                    <input type="password" name="sign-up-confirmpassword" id="sign-up-confirmpassword"
+                                        class="text-input-row" placeholder=" " autocomplete="off">
+                                    <label for="sign-up-confirmpassword" class="text-input-label">Confirm
+                                        Password</label>
+                                </div>
+                                <div class="row">
+                                    <input type="email" name="sign-up-email" id="sign-up-email" class="text-input-row"
+                                        placeholder=" " autocomplete="off">
+                                    <label for="sign-up-confirmpassword" class="text-input-label">Email</label>
+                                </div>
+                            </div>
+
+                            <button type="button" id="sign-up">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="sign-in-form">
+                    <form>
+                        <div class="form-part">
+                            <h2 class="join-coala">Welcome Coala !</h2>
+                            <div class="input-group">
+                                <div class="row">
+                                    <input type="text" name="sign-in-username" id="sign-in-username"
+                                        class="text-input-row" placeholder=" " autocomplete="off">
+                                    <label for="sign-in-username" class="text-input-label">Username</label>
+                                </div>
+                                <div class="row">
+                                    <input type="text" name="sign-in-password" id="sign-in-password"
+                                        class="text-input-row" placeholder=" " autocomplete="off">
+                                    <label for="sign-in-password" class="text-input-label">Password</label>
+                                </div>
+                            </div>
+
+                            <button type="button" id="sign-in">Sign In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/register.js"></script>
+</body>
+
+</html>
