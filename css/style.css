@@ -184,3 +184,96 @@ li#sign-in {
     border-radius: 5px;
     padding: 5px 10px;
 }
+
+li {
+    list-style: none;
+}
+
+.user-icon-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-menu {
+    padding-top: 17px;
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: -126px;
+    width: max-content;
+    padding-bottom: 5px;
+    border-radius: 8px;
+
+    cursor: default;
+
+    &.show {
+        display: block;
+    }
+}
+
+.drop-down {
+    padding: 5px 20px;
+    font-size: 16px;
+    background-color: #eee;
+
+    &:hover {
+        background-color: #d9d9d9;
+    }
+
+    &:last-child {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+}
+
+.drop-down a {
+    color: #000;
+}
+
+#switch-account {
+    position: relative;
+}
+
+.account-menu {
+    display: none;
+    position: absolute;
+    left: -127px;
+    padding-block: 8px;
+    background-color: #eee;
+    border-radius: 8px;
+    top: -8px;
+
+    #switch-account:is(:hover, :active) & {
+        display: block;
+    }
+
+    & .current-profile {
+        color: #fff;
+        background-color: royalblue;
+    }
+}
+
+.profile-dropdown {
+    padding: 5px 20px;
+    background-color: #eee;
+
+    &:not(.current-profile):hover {
+        cursor: pointer;
+        background-color: #d9d9d9;
+    }
+}
+
+.profile-dropdown>div {
+    width: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+
+    & img {
+        width: 30px;
+    }
+}

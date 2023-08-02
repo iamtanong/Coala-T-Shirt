@@ -9,13 +9,15 @@ select_lists.forEach((select_list, index) => {
         })
         select_list.classList.add("current-list");
 
-        if (index == 0) {
-            purchase_history.classList.remove("current-content")
-            my_account.classList.add("current-content")
+        document.querySelectorAll(".current-content").forEach(e => {
+            e.classList.remove("current-content");
+        })
+
+        if (index === 0) {
+            my_account.classList.add("current-content");
         }
-        else if (index == 1) {
-            my_account.classList.remove("current-content")
-            purchase_history.classList.add("current-content")
+        else if (index === 1) {
+            purchase_history.classList.add("current-content");
         }
     })
 })

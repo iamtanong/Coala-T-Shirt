@@ -1,12 +1,7 @@
-let count = document.getElementById("count")
-let plus_btn = document.getElementById("plus-btn")
-let minus_btn = document.getElementById("minus-btn")
+let user_icon_btn = document.querySelector(".user-icon-btn");
 
-plus_btn.addEventListener("click", () => {
-    let num = count.value
-    count.value = (parseInt(num) + 1).toString()
+user_icon_btn.addEventListener("click", () => {
+    document.querySelector(".user-menu").classList.toggle("show")
 })
-minus_btn.addEventListener("click", () => {
-    if (count.value > 1)
-        count.value -= 1
-})
+
+
