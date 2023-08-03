@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coala</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/shop.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -33,177 +35,257 @@
                     <i class='bx bxs-conversation'></i>
                 </div>
                 <div class="user-icon">
-                    <i class='bx bxs-user-circle'></i>
+                    <button type="button" class="user-icon-btn"><i class='bx bxs-user-circle'></i></button>
+                    <ul class="user-menu">
+                        <li class="drop-down"><a href="profile.html">Profile</a></li>
+                        <li class="drop-down" id="switch-account">Switch Account
+                            <ul class="account-menu">
+                                <li class="profile-dropdown current-profile">
+                                    <div>
+                                        <img src="../image/logo_300x300.png" alt="">
+                                        Profile1
+                                    </div>
+                                </li>
+                                <li class="profile-dropdown">
+                                    <div>
+                                        <img src="../image/logo_300x300.png" alt="">
+                                        Shop1
+                                    </div>
+                                </li>
+                                <li class="profile-dropdown">
+                                    <div>
+                                        <img src="../image/logo_300x300.png" alt="">
+                                        Shop2
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="drop-down">Logout</li>
+                    </ul>
                 </div>
             </div>
         </div>
+
     </nav>
 
-    <div class="container main">
-        <div class="shirt-preview">
-            <div class="display"></div>
-            <div class="abc">
-                <div class="a"></div>
-                <div class="b"></div>
-                <div class="c"></div>
-            </div>
-        </div>
-        <div class="shirt-option">
-            <form>
-                <!-- Size -->
-                <div class="input-row-group">
-                    <span class="radio-caption">Size:</span>
-                    <!-- <div class="radio-group">
-                        <input type="radio" name="size" value="S" id="size-S">
-                        <label for="size-S" class="radio-label">S</label>
+
+    <div class="container">
+
+        <div class="slide-show-wrapper">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img id="slide-1" src="../image/t-shirt.png" alt="..">
                     </div>
-                    <div class="radio-group">
-                        <input type="radio" name="size" value="M" id="size-M">
-                        <label for="size-M" class="radio-label">M</label>
+                    <div class="swiper-slide">
+                        <img id="slide-2" src="../image/t-shirt.png" alt=".." style="filter:invert(.2)">
                     </div>
-                    <div class="radio-group">
-                        <input type="radio" name="size" value="L" id="size-L">
-                        <label for="size-L" class="radio-label">L</label>
+                    <div class="swiper-slide">
+                        <img id="slide-3" src="../image/t-shirt.png" alt=".." style="filter: contrast(1.3);">
                     </div>
-                    <div class="radio-group">
-                        <input type="radio" name="size" value="XL" id="size-XL">
-                        <label for="size-XL" class="radio-label">XL</label>
-                    </div> -->
+                    <div class="swiper-slide">
+                        <img id="slide-4" src="../image/t-shirt.png" alt=".." style="filter:invert(.7)">
+                    </div>
+                    <div class="swiper-slide">
+                        <img id="slide-5" src="../image/t-shirt.png" alt=".." style="filter: contrast(.2);">
+                    </div>
                 </div>
 
-                <!-- Color -->
-                <div class="input-row-group">
-                    <span class="radio-caption">Color:</span>
-                    <!-- <div class="radio-group">
-                        <input type="radio" name="color" value="S" id="color-Red">
-                        <label for="color-Red" class="radio-label">Red</label>
-                    </div>
-                    <div class="radio-group">
-                        <input type="radio" name="color" value="M" id="color-Green">
-                        <label for="color-Green" class="radio-label">Green</label>
-                    </div>
-                    <div class="radio-group">
-                        <input type="radio" name="color" value="L" id="color-Blue">
-                        <label for="color-Blue" class="radio-label">Blue</label>
-                    </div> -->
-                </div>
+                <div class="swiper-pagination"></div>
 
-                <!-- Fabric -->
-                <div class="input-row-group">
-                    <span class="radio-caption">Fabric:</span>
-                    <!-- <div class="radio-group">
-                        <input type="radio" name="fabric" value="Cotton" id="fabric-Cotton">
-                        <label for="fabric-Cotton" class="radio-label">Cotton</label>
-                    </div>
-                    <div class="radio-group">
-                        <input type="radio" name="fabric" value="Polyester" id="fabric-Polyester">
-                        <label for="fabric-Polyester" class="radio-label">Polyester</label> 
-                    </div>-->
-                </div>
-
-                <!-- Neckline -->
-                <div class="input-row-group">
-                    <span class="radio-caption">Neckline:</span>
-                    <!-- <div class="radio-group">
-                        <input type="radio" name="neckline" value="Crew-neck" id="neckline-Crew">
-                        <label for="neckline-Crew" class="radio-label">Crew neck</label>
-                    </div>
-                    <div class="radio-group">
-                        <input type="radio" name="neckline" value="V-neck" id="neckline-V">
-                        <label for="neckline-V" class="radio-label">V-neck</label>
-                    </div>
-                    <div class="radio-group">
-                        <input type="radio" name="neckline" value="Scoop-neck" id="neckline-Scoop">
-                        <label for="neckline-Scoop" class="radio-label">Scoop neck</label>
-                    </div> -->
-                </div>
-
-                <!-- Sleeve length -->
-                <div class="input-row-group">
-                    <span class="radio-caption">Sleeve length:</span>
-                    <!-- <div class="radio-group">
-                        <input type="radio" name="sleeve" value="Sleeveless" id="sleeve-Less">
-                        <label for="sleeve-Less" class="radio-label">Sleeveless</label>
-                    </div>
-                    <div class="radio-group">
-                        <input type="radio" name="sleeve" value="Short-sleeves" id="sleeve-Short">
-                        <label for="sleeve-Short" class="radio-label">Short sleeves</label>
-                    </div>
-                    <div class="radio-group">
-                        <input type="radio" name="sleeve" value="Long-sleeves" id="sleeve-Long">
-                        <label for="sleeve-Long" class="radio-label">Long sleeves</label>
-                    </div> -->
-                </div>
-
-                <!-- Fit -->
-                <div class="input-row-group">
-                    <span class="radio-caption">Fit:</span>
-                    <!-- <div class="radio-group">
-                        <input type="radio" name="fit" value="Slim-fit" id="fit-Slim">
-                        <label for="fit-Slim" class="radio-label">Slim fit</label>
-                    </div>
-                    <div class="radio-group">
-                        <input type="radio" name="fit" value="Regular-fit" id="fit-Regular">
-                        <label for="fit-Regular" class="radio-label">Regular fit</label>
-                    </div>
-                    <div class="radio-group">
-                        <input type="radio" name="fit" value="Long-sleeves" id="fit-Long">
-                        <label for="fit-Long" class="radio-label">Oversized</label>
-                    </div> -->
-                </div>
-
-                <!-- Design -->
-
-                <!-- Count -->
-                <div class="input-row-group count-input">
-                    <button type="button" class="count-btn" id="minus-btn">-</button>
-                    <input type="number" name="count" id="count" value="1" min="0">
-                    <button type="button" class="count-btn" id="plus-btn">+</button>
-                </div>
-
-                <!-- Buy & Cart -->
-                <div class="input-row-group cart-buy-group">
-                    <button type="button" class="cart-btn">Add to Cart</button>
-                    <button type="button" class="buy-now-btn">Buy Now</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="shirt-detail">
-        <table>
-            <caption></caption>
-            <tr>
-                <th>Brand</th>
-                <td>Durex</td>
-            </tr>
-            <tr>
-                <th>Price</th>
-                <td>999 - 1299 THB</td>
-            </tr>
-            <tr>
-                <th>Kuy</th>
-                <td>56</td>
-            </tr>
-            <tr>
-                <th>Nom</th>
-                <td>Yai</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="shop">
-        <div class="shop-about">
-            <div class="shop-logo"></div>
-            <div class="shop-info">
-                <h3 class="shop-name">Durex shop</h3>
-                <h4 class="shop-desc">All about hee & kuay</h4>
-                <h6 class="shop-rating">5 star</h6>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
 
+        <div class="about-cc">
+            <h1 class="about-cc-header">
+                About Carbon Credit
+            </h1>
+            <div class="about-cc-group">
+                <div class="about-cc-content">
+                    <h2 class="number">3000+</h2>
+                    <h3 class="number-caption">All Time Traded</h3>
+                </div>
+                <div class="about-cc-content">
+                    <h2 class="number">430K+</h2>
+                    <h3 class="number-caption">Token In Stock</h3>
+                </div>
+                <div class="about-cc-content">
+                    <h2 class="number">$40M+</h2>
+                    <h3 class="number-caption">Trade Volume</h3>
+                </div>
+                <div class="about-cc-content">
+                    <h2 class="number">2000+</h2>
+                    <h3 class="number-caption">World Helper</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommend">
+            <h2 class="recommend-header">Recommend Designs</h2>
+            <div class="t-shirt-group">
+                <div class="t-shirt">
+                    <div class="shirt-img-wrapper">
+                        <img src="../image/t-shirt.png" alt="T-shirt-preview">
+                    </div>
+                    <div class="product-desc">
+                        <h1 class="product-name">Product Name</h1>
+                        <h2 class="shop-name">By Tanuson</h2>
+                        <div class="category-group">
+                            <span class="category">V-shirt</span>
+                            <span class="category">Short</span>
+                            <span class="category">White</span>
+                            <span class="category">Street Fasion</span>
+                            <span class="category">Oversized</span>
+                            <span class="category">Velvet</span>
+                        </div>
+                        <h3 class="price"><span>350 - 450</span> THB</h3>
+                        <div class="star-group">
+                            <div class="star">00000</div>
+                            <span class="user-rating">4,789 +</span>
+                        </div>
+
+                        <button type="button" class="add-btn">Add +</button>
+                    </div>
+                </div>
+                <div class="t-shirt">
+                    <div class="shirt-img-wrapper">
+                        <img src="../image/t-shirt.png" alt="T-shirt-preview">
+                    </div>
+                    <div class="product-desc">
+                        <h1 class="product-name">Product Name</h1>
+                        <h2 class="shop-name">By Tanuson</h2>
+                        <div class="category-group">
+                            <span class="category">V-shirt</span>
+                            <span class="category">Short</span>
+                            <span class="category">White</span>
+                            <span class="category">Street Fasion</span>
+                            <span class="category">Oversized</span>
+                            <span class="category">Velvet</span>
+                        </div>
+                        <h3 class="price"><span>350 - 450</span> THB</h3>
+                        <div class="star-group">
+                            <div class="star">00000</div>
+                            <span class="user-rating">4,789 +</span>
+                        </div>
+
+                        <button type="button" class="add-btn">Add +</button>
+                    </div>
+                </div>
+                <div class="t-shirt">
+                    <div class="shirt-img-wrapper">
+                        <img src="../image/t-shirt.png" alt="T-shirt-preview">
+                    </div>
+                    <div class="product-desc">
+                        <h1 class="product-name">Product Name</h1>
+                        <h2 class="shop-name">By Tanuson</h2>
+                        <div class="category-group">
+                            <span class="category">V-shirt</span>
+                            <span class="category">Short</span>
+                            <span class="category">White</span>
+                            <span class="category">Street Fasion</span>
+                            <span class="category">Oversized</span>
+                            <span class="category">Velvet</span>
+                        </div>
+                        <h3 class="price"><span>350 - 450</span> THB</h3>
+                        <div class="star-group">
+                            <div class="star">00000</div>
+                            <span class="user-rating">4,789 +</span>
+                        </div>
+
+                        <button type="button" class="add-btn">Add +</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="recommend">
+            <h2 class="recommend-header">Recommend Shop</h2>
+            <div class="t-shirt-group">
+                <div class="t-shirt">
+                    <div class="shirt-img-wrapper">
+                        <img src="../image/t-shirt.png" alt="T-shirt-preview">
+                    </div>
+                    <div class="product-desc">
+                        <h1 class="product-name">Product Name</h1>
+                        <h2 class="shop-name">By Tanuson</h2>
+                        <div class="category-group">
+                            <span class="category">V-shirt</span>
+                            <span class="category">Short</span>
+                            <span class="category">White</span>
+                            <span class="category">Street Fasion</span>
+                            <span class="category">Oversized</span>
+                            <span class="category">Velvet</span>
+                        </div>
+                        <h3 class="price"><span>350 - 450</span> THB</h3>
+                        <div class="star-group">
+                            <div class="star">00000</div>
+                            <span class="user-rating">4,789 +</span>
+                        </div>
+
+                        <button type="button" class="add-btn">Add +</button>
+                    </div>
+                </div>
+                <div class="t-shirt">
+                    <div class="shirt-img-wrapper">
+                        <img src="../image/t-shirt.png" alt="T-shirt-preview">
+                    </div>
+                    <div class="product-desc">
+                        <h1 class="product-name">Product Name</h1>
+                        <h2 class="shop-name">By Tanuson</h2>
+                        <div class="category-group">
+                            <span class="category">V-shirt</span>
+                            <span class="category">Short</span>
+                            <span class="category">White</span>
+                            <span class="category">Street Fasion</span>
+                            <span class="category">Oversized</span>
+                            <span class="category">Velvet</span>
+                        </div>
+                        <h3 class="price"><span>350 - 450</span> THB</h3>
+                        <div class="star-group">
+                            <div class="star">00000</div>
+                            <span class="user-rating">4,789 +</span>
+                        </div>
+
+                        <button type="button" class="add-btn">Add +</button>
+                    </div>
+                </div>
+                <div class="t-shirt">
+                    <div class="shirt-img-wrapper">
+                        <img src="../image/t-shirt.png" alt="T-shirt-preview">
+                    </div>
+                    <div class="product-desc">
+                        <h1 class="product-name">Product Name</h1>
+                        <h2 class="shop-name">By Tanuson</h2>
+                        <div class="category-group">
+                            <span class="category">V-shirt</span>
+                            <span class="category">Short</span>
+                            <span class="category">White</span>
+                            <span class="category">Street Fasion</span>
+                            <span class="category">Oversized</span>
+                            <span class="category">Velvet</span>
+                        </div>
+                        <h3 class="price"><span>350 - 450</span> THB</h3>
+                        <div class="star-group">
+                            <div class="star">00000</div>
+                            <span class="user-rating">4,789 +</span>
+                        </div>
+
+                        <button type="button" class="add-btn">Add +</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../js/app.js"></script>
-    <!-- <script src="./product.js"></script> -->
+    <script src="../js/nav.js"></script>
+
+
 </body>
 
 </html>
