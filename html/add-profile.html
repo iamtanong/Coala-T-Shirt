@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Profile</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/add-profile.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <nav class="sign">
+        <div class="logo-group">
+            <h2 class="coala">COALA co.</h2>
+            <ul class="nav-link">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">support</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="UCC-group">
+                <input type="text" id="search-bar">
+                <div class="cart-icon">
+                    <span class="notification">99</span>
+                    <i class='bx bxs-cart'></i>
+                </div>
+                <div class="chat-icon">
+                    <span class="notification">99</span>
+                    <i class='bx bxs-conversation'></i>
+                </div>
+                <div class="user-icon">
+                    <button type="button" class="user-icon-btn"><i class='bx bxs-user-circle'></i></button>
+                    <ul class="user-menu">
+                        <li class="drop-down"><a href="profile.html">Profile</a></li>
+                        <li class="drop-down" id="switch-account">Switch Account
+                            <ul class="account-menu">
+                                <li class="profile-dropdown current-profile">
+                                    <div>
+                                        <img src="../image/logo_300x300.png" alt="">
+                                        Profile1
+                                    </div>
+                                </li>
+                                <li class="profile-dropdown">
+                                    <div>
+                                        <img src="../image/logo_300x300.png" alt="">
+                                        Shop1
+                                    </div>
+                                </li>
+                                <li class="profile-dropdown">
+                                    <div>
+                                        <img src="../image/logo_300x300.png" alt="">
+                                        Shop2
+                                    </div>
+                                </li>
+                                <li class="profile-dropdown">
+                                    <a href="add-profile.html"><i class='bx bx-plus'></i> Add Profile</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="drop-down">Logout</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="container">
+        <div class="add-profile">
+            <h1 class="header">Add Shop Profile</h1>
+            <div class="input-img">
+                <img src="../image/logo_300x300.png" alt="image">
+                <input type="file">
+            </div>
+            <input type="text" name="profile-name" id="profile-name">
+            <button type="button" id="add-profile-btn">Add Shop To Profile</button>
+        </div>
+    </div>
+
+
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>
