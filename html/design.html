@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/shirt-option.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <nav class="unsign">
+        <div class="logo-group">
+            <h2 class="coala">COALA co.</h2>
+            <ul class="nav-link">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">support</a></li>
+            </ul>
+        </div>
+        <div>
+            <input type="text" id="search-bar">
+            <ul class="nav-link">
+                <li id="sign-in"><a href="">sign in</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="option">
+            <div class="dialogue success">
+                Add To Cart Successfully!
+            </div>
+            <div class="shirt-preview">
+                <img src="../image/t-shirt.png" alt="T-shirt-Preview">
+            </div>
+            <div class="shirt-option">
+                <form id="shirt-option-parts">
+
+                    <div class="option-part current-part" id="step-3">
+                        <h4 class="progress"><span>Step 3 of 2</span> : Product Design</h4>
+                        <h1 class="product-name">Product Name</h1>
+                        <input type="file" name="design-upload" id="design-upload" class="design-upload">
+
+                        <div class="color-dropdown">
+                            <div class="select">
+                                <span>Select one of Colors</span>
+                            </div>
+                            <input type="hidden" name="color">
+                            <ul class="color-dropdown-menu">
+                                <li class="color-option" id="red">Red</li>
+                                <li class="color-option" id="blue">Blue</li>
+                                <li class="color-option" id="black">Black</li>
+                            </ul>
+                        </div>
+
+                        <button type="button" id="design-upload-btn">Upload your own design</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="../js/shirt-option.js"></script>
+</body>
+
+
+</html>
